@@ -1,12 +1,12 @@
 [package]
 name = "slippage_check"
 edition = "2024.beta"
-published-at = "0x8add2f0f8bc9748687639d7eb59b2172ba09a0172d9e63c029e23a7dbdb6abe6"
+published-at = "0xfd6a45c396a90811fd93efaf585cc95c29aecd079c87822893f1e97e3fee8c50"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet", override = true }
 
 
 [addresses]
-slippage_check = "0x8add2f0f8bc9748687639d7eb59b2172ba09a0172d9e63c029e23a7dbdb6abe6"
+slippage_check = "0xfd6a45c396a90811fd93efaf585cc95c29aecd079c87822893f1e97e3fee8c50"
 
