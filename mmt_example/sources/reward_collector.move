@@ -11,11 +11,12 @@ module mmt_example::reward_collector{
         position: &mut Position,
         clock: &Clock,
         version: &Version,
+        recipient: address,
         tx_context: &mut TxContext,
     ) {
         let (coinX, coinY) = collect::fee(pool, position, clock, version, tx_context);
-        public_transfer(coinX, tx_context::sender(tx_context));
-        public_transfer(coinY, tx_context::sender(tx_context));
+        public_transfer(coinX, recipient);
+        public_transfer(coinY, recipient);
     }
 
     /*
@@ -27,10 +28,11 @@ module mmt_example::reward_collector{
         position: &mut Position,
         clock: &Clock,
         version: &Version,
+        recipient: address,
         tx_context: &mut TxContext,
     ) {
         let reward = collect::reward<X, Y, R>(pool, position, clock, version, tx_context);
-        public_transfer(reward, tx_context::sender(tx_context));
+        public_transfer(reward, recipient);
     }
 
     public fun hasClaimableFee(position: & Position) : bool {
