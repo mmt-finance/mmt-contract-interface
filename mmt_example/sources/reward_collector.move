@@ -6,7 +6,7 @@ module mmt_example::reward_collector{
     use sui::clock::{Clock};
     use sui::transfer::public_transfer;
 
-    public fun collectFeesAndReward<X, Y> (
+    public fun collectFees<X, Y> (
         pool: &mut Pool<X, Y>,
         position: &mut Position,
         clock: &Clock,
@@ -33,25 +33,5 @@ module mmt_example::reward_collector{
     ) {
         let reward = collect::reward<X, Y, R>(pool, position, clock, version, tx_context);
         public_transfer(reward, recipient);
-    }
-
-    public fun hasClaimableFee(position: & Position) : bool {
-        position::owed_coin_x(position) > 0 && position::owed_coin_y(position) > 0
-    }
-
-    public fun hasClaimableReward(position: & Position) : bool{
-        let reward_length = position::reward_length(position);
-        if (reward_length == 0) {
-            return false
-        };
-        let mut i = 0;
-        while (i < reward_length){
-            let claimable_reward = position::coins_owed_reward(position, i);
-            if (claimable_reward > 0) {
-                return true
-            };
-            i = i + 1;
-        };
-        return false
     }
 }
