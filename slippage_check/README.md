@@ -41,3 +41,4 @@ sui move build --dependencies-are-root && sui client publish --dependencies-are-
 /// - `arg2`: A boolean value indicating the direction of the slippage check.
 public fun assert_slippage<T0, T1>(arg0: &mut Pool<T0, T1>, arg1: u128, arg2: bool) {}
 ```
+
