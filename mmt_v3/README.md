@@ -5,7 +5,7 @@ This document provides guidelines for integrating with the MMT V3 contract.
 
 | Tag of Repo    | Network | Latest published at address                                        |
 |----------------| ------- | ------------------------------------------------------------------ |
-| mainnet-v1.0.1 | mainnet | 0x70285592c97965e811e0c6f98dccc3a9c2b4ad854b3594faab9597ada267b860 |
+| mainnet-v1.1.0 | mainnet | 0x9c12f3aa14a449a0a23c066589e269086f021a98939f21158cfacb16d19787c3 |
 | testnet-v1.0.1 | testnet | 0xd7c99e1546b1fc87a6489afdc08bcece4ae1340cbd8efd2ab152ad71dea0f0f2 |
 
 eg:
@@ -13,7 +13,7 @@ eg:
 mainnet:
 
 ```
-MmtV3 = { git = "https://github.com/mmt-finance/mmt-contract-interface.git", subdir = "mmt_v3", rev = "mainnet-v1.0.1" }
+MmtV3 = { git = "https://github.com/mmt-finance/mmt-contract-interface.git", subdir = "mmt_v3", rev = "mainnet-v1.1.0" }
 ```
 
 testnet:
