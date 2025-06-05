@@ -1,7 +1,7 @@
 [package]
 name = "mmt_v3"
 edition = "2024.beta"
-published-at = "0x9c12f3aa14a449a0a23c066589e269086f021a98939f21158cfacb16d19787c3"
+published-at = "0x60e8683e01d5611cd13a69aca2b0c9aace7c6b559734df1b4a7ad9d6bddf007b"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet", override = true }
