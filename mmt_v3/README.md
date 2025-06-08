@@ -3,10 +3,12 @@ This document provides guidelines for integrating with the MMT V3 contract.
 
 ## GitHub Tags corresponding to different networks
 
-| Tag of Repo    | Network | Latest package id                                                  | Latest published at address                                        |
-|----------------| ------- |--------------------------------------------------------------------|--------------------------------------------------------------------|
-| mainnet-v1.1.2 | mainnet | 0x70285592c97965e811e0c6f98dccc3a9c2b4ad854b3594faab9597ada267b860 |  0x60e8683e01d5611cd13a69aca2b0c9aace7c6b559734df1b4a7ad9d6bddf007b|
-| testnet-v1.0.1 | testnet | 0xd7c99e1546b1fc87a6489afdc08bcece4ae1340cbd8efd2ab152ad71dea0f0f2 | 0xd7c99e1546b1fc87a6489afdc08bcece4ae1340cbd8efd2ab152ad71dea0f0f2 |
+| Tag of Repo    | Network              | address                                                            | 
+|----------------|----------------------|--------------------------------------------------------------------|
+| mainnet-v1.1.3 | mainnet package id   | 0x70285592c97965e811e0c6f98dccc3a9c2b4ad854b3594faab9597ada267b860 |  
+| mainnet-v1.1.3 | mainnet published at | 0xc84b1ef2ac2ba5c3018e2b8c956ba5d0391e0e46d1daa1926d5a99a6a42526b4 |  
+| testnet-v1.0.1 | testnet package id   | 0xd7c99e1546b1fc87a6489afdc08bcece4ae1340cbd8efd2ab152ad71dea0f0f2 | 
+| testnet-v1.0.1 | testnet published at | 0xd7c99e1546b1fc87a6489afdc08bcece4ae1340cbd8efd2ab152ad71dea0f0f2 | 
 
 
 eg:
@@ -14,7 +16,7 @@ eg:
 mainnet:
 
 ```
-MmtV3 = { git = "https://github.com/mmt-finance/mmt-contract-interface.git", subdir = "mmt_v3", rev = "mainnet-v1.1.2" }
+MmtV3 = { git = "https://github.com/mmt-finance/mmt-contract-interface.git", subdir = "mmt_v3", rev = "mainnet-v1.1.3" }
 ```
 
 testnet:
