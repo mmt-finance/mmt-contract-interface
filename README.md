@@ -9,7 +9,7 @@
   | Contract                  | address                                                            | 
   |---------------------------|--------------------------------------------------------------------| 
   | mmt_v3 package id         | 0x70285592c97965e811e0c6f98dccc3a9c2b4ad854b3594faab9597ada267b860 |
-  | mmt_v3 published at       | 0xc84b1ef2ac2ba5c3018e2b8c956ba5d0391e0e46d1daa1926d5a99a6a42526b4 | 
+  | mmt_v3 published at       | 0xcf60a40f45d46fc1e828871a647c1e25a0915dec860d2662eb10fdb382c3c1d1 | 
   | slippage_check package id | 0x8add2f0f8bc9748687639d7eb59b2172ba09a0172d9e63c029e23a7dbdb6abe6 | 
   | slippage_check published at | 0x8add2f0f8bc9748687639d7eb59b2172ba09a0172d9e63c029e23a7dbdb6abe6 | 
 

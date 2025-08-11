@@ -147,6 +147,7 @@ module mmt_v3::pool {
     public fun reward_coin_type<X, Y>(pool: &Pool<X, Y>, index: u64): TypeName { abort 0 }
     public fun fee_growth_global_x<X, Y>(pool: &Pool<X, Y>): u128 { abort 0 }
     public fun fee_growth_global_y<X, Y>(pool: &Pool<X, Y>): u128 { abort 0 }
+    public fun min_tick_range_factor<X, Y>(pool: &Pool<X, Y>): u32 { abort 0 }
 
     // oracle public functions
     public fun observe<X, Y>(
@@ -158,12 +159,12 @@ module mmt_v3::pool {
     }
 
     // rewards getters
-    public fun total_reward<X, Y>(pool: &Pool<X, Y>, reward_id: u64) : u64 { abort 0 }
-    public fun total_reward_allocated<X, Y>(pool: &Pool<X, Y>, reward_id: u64) : u64 { abort 0 }
+    public fun total_reward<X, Y>(pool: &Pool<X, Y>, reward_index: u64) : u64 { abort 0 }
+    public fun total_reward_allocated<X, Y>(pool: &Pool<X, Y>, reward_index: u64) : u64 { abort 0 }
     public fun reward_ended_at<X, Y>(pool: &Pool<X, Y>, reward_index: u64): u64 { abort 0 }
-    public fun reward_growth_global<X, Y>(pool: &Pool<X, Y>, timestamp: u64): u128 { abort 0 }
+    public fun reward_growth_global<X, Y>(pool: &Pool<X, Y>, reward_index: u64): u128 { abort 0 }
     public fun reward_last_update_at<X, Y>(pool: &Pool<X, Y>, reward_index: u64): u64 { abort 0 }
-    public fun reward_per_seconds<X, Y>(pool: &Pool<X, Y>, timestamp: u64): u128 { abort 0 }
+    public fun reward_per_seconds<X, Y>(pool: &Pool<X, Y>, reward_index: u64): u128 { abort 0 }
     public fun reward_length<X, Y>(pool: &Pool<X, Y>): u64 {abort 0}
     public fun reward_info_at<X, Y>(pool: &Pool<X, Y>, index: u64): &PoolRewardInfo {
         abort 0

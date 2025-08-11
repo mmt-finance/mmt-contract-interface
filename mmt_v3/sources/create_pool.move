@@ -22,13 +22,8 @@ module mmt_v3::create_pool {
     ): Pool<X, Y> {
         abort 0
     }
-    
-    fun create_pool_internal<X, Y>(
-        global_config: &GlobalConfig,
-        fee_rate: u64,
-        version: &Version,        
-        tx_context: &mut TxContext
-    ): Pool<X, Y> {
+
+    public fun check_coin_order<X, Y>(): bool {
         abort 0
     }
 }
