@@ -50,4 +50,19 @@ module mmt_v3::constants {
     public fun q64() : u128 {
         abort 0
     }
+
+    public fun default_min_tick_range_factor() : u32 {
+        abort 0
+    }
+    
+    public fun protocol_swap_fee_share(): u64 {
+        abort 0
+    }
+    public fun protocol_flash_loan_fee_share(): u64 {
+        abort 0
+    }
+
+    public fun max_protocol_fee_percent(): u64 {
+        abort 0
+    }
 }

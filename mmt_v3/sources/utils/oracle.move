@@ -22,9 +22,9 @@ module mmt_v3::oracle {
     public fun get_surrounding_observations(
         observations: &vector<Observation>, 
         target_timestamp: u64, 
-        tick_difference: I32, 
+        current_tick: I32, 
         start_index: u64, 
-        length: u128, 
+        liquidity: u128,
         observation_cardinality: u64
     ) : (Observation, Observation) {
         abort 0
@@ -46,7 +46,7 @@ module mmt_v3::oracle {
         observations: &vector<Observation>, 
         timestamp: u64, 
         intervals: vector<u64>, 
-        tick_difference: I32, 
+        current_tick: I32, 
         start_index: u64, 
         liquidity: u128, 
         total_observations: u64
@@ -58,7 +58,7 @@ module mmt_v3::oracle {
         observations: &vector<Observation>, 
         timestamp: u64, 
         interval: u64, 
-        tick_difference: I32, 
+        current_tick: I32, 
         start_index: u64, 
         liquidity: u128, 
         observation_cardinality: u64
@@ -81,8 +81,8 @@ module mmt_v3::oracle {
     public fun transform(
         observation: &Observation, 
         timestamp: u64, 
-        tick_difference: I32, 
-        liquidity: u128
+        current_tick: I32, 
+        liquidity: u128 
     ) : Observation {
         abort 0
     }
@@ -91,7 +91,7 @@ module mmt_v3::oracle {
         observations: &mut vector<Observation>, 
         observation_index: u64, 
         timestamp: u64, 
-        tick_difference: I32, 
+        current_tick: I32, 
         liquidity: u128, 
         observation_cardinality: u64, 
         observation_cardinality_next: u64

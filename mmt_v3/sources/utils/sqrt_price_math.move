@@ -12,11 +12,21 @@ module mmt_v3::sqrt_price_math {
         abort 0
     }
     
+    /// \[Deprecated\] Please use the new method get_next_sqrt_price_from_amount_x_input
     public fun get_next_sqrt_price_from_amount_x_rouding_up(current_price: u128, liquidity: u128, amount: u64, round_up: bool) : u128 {
         abort 0
     }
     
+    /// \[Deprecated\] Please use the new method get_next_sqrt_price_from_amount_y_input
     public fun get_next_sqrt_price_from_amount_y_rouding_down(current_price: u128, liquidity: u128, amount: u64, round_up: bool) : u128 {
+        abort 0
+    }
+
+    public fun get_next_sqrt_price_from_amount_x_input(current_price: u128, liquidity: u128, amount: u64, round_up: bool) : u128 {
+        abort 0
+    }
+
+    public fun get_next_sqrt_price_from_amount_y_input(current_price: u128, liquidity: u128, amount: u64, round_up: bool) : u128 {
         abort 0
     }
     
