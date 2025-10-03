@@ -22,18 +22,4 @@ module mmt_v3::global_config {
     public fun get_tick_spacing(self: &GlobalConfig, fee_rate: u64): u32 {
         abort 0
     }
-
-    #[test_only]
-    public fun init_(tx_context: &mut TxContext) {
-        let mut global_config = GlobalConfig{
-            id: object::new(tx_context), 
-            fee_amount_tick_spacing: table::new<u64, u32>(tx_context)
-        };
-        enable_fee_rate_internal(&mut global_config, 100, 2, tx_context);
-        enable_fee_rate_internal(&mut global_config, 500, 10, tx_context);
-        enable_fee_rate_internal(&mut global_config, 3000, 60, tx_context);
-        enable_fee_rate_internal(&mut global_config, 10000, 200, tx_context);
-        
-        transfer::share_object<GlobalConfig>(global_config);
-    }
 }
